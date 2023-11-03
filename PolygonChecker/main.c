@@ -1,3 +1,5 @@
+// CSCN71020-GROUP7
+
 #include <stdio.h>
 #include <stdbool.h>
 #include "main.h"
@@ -60,13 +62,13 @@ void printWelcome() {
 
 int printShapeMenu() {
     printf_s("1. Triangle\n");
-    printf_s("2. Rectangle\n");  // Add Rectangle option
+    printf_s("2. Rectangle\n");  // Added Rectangle option
     printf_s("0. Exit\n");
 
     int shapeChoice;
 
     printf_s("Enter number:");
-    scanf_s("%d", &shapeChoice);  // Use %d to read an integer
+    scanf_s("%d", &shapeChoice);  // Using %d to read an integer
 
     return shapeChoice;
 }
@@ -86,7 +88,7 @@ void getTriangleInfo(double* side1, double* side2, double* side3) {
         }
         else {
             printf_s("Invalid input. Please enter three numeric values separated by spaces.\n");
-            // Clear the input buffer
+            // Clearing the input buffer
             int c;
             while ((c = getchar()) != '\n' && c != EOF);
         }
