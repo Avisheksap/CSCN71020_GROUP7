@@ -1,4 +1,5 @@
 #pragma once
+
 void printWelcome();
 int printShapeMenu();
-int* getTriangleSides(int* triangleSides);
+void getTriangleInfo(double* side1, double* side2, double* side3);
