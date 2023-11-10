@@ -1,4 +1,4 @@
-// CSCN71020-GROUP7
+// CSCN71020_GROUP7
 
 #include <stdio.h>
 #include <stdbool.h>
