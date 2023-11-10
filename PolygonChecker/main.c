@@ -78,7 +78,10 @@ int printShapeMenu() {
 void getTriangleInfo(double* side1, double* side2, double* side3) {
     while (1) {
         printf_s("Enter the three side lengths of the triangle:\n");
+
+        // Reading and validating the input for triangle sides
         if (scanf_s("%lf %lf %lf", side1, side2, side3) == 3) {
+            // Check if the sides are positive
             if (*side1 <= 0 || *side2 <= 0 || *side3 <= 0) {
                 printf_s("Side lengths must be positive. Please try again.\n");
             }
@@ -88,6 +91,7 @@ void getTriangleInfo(double* side1, double* side2, double* side3) {
         }
         else {
             printf_s("Invalid input. Please enter three numeric values separated by spaces.\n");
+
             // Clearing the input buffer
             int c;
             while ((c = getchar()) != '\n' && c != EOF);
