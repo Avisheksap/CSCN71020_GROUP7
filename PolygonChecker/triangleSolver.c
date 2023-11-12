@@ -90,7 +90,7 @@ char* analyzeRectangle(double x1, double y1, double x2, double y2, double x3, do
     return "Not a rectangle";
 }
 
-// Function to calculate the perimeter of a rectangle
+// Function to calculate the perimeter of the rectangle
 double calculateRectanglePerimeter(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4) {
     double side1 = sqrt(pow(x2 - x1, 2) + pow(y2 - y1, 2));
     double side2 = sqrt(pow(x3 - x2, 2) + pow(y3 - y2, 2));
