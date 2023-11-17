@@ -236,5 +236,77 @@ namespace TypeOfTraingleFunctionalityUnitTest
 			Assert::AreNotEqual("Isosceles triangle", result);
 			Assert::AreNotEqual("Scalene triangle", result);
 		}
-	};
+			// Testing for a Large Equilateral Triangle
+	TEST_METHOD(TestLargeEquilateralTriangle)
+	{
+		// Arrange
+		int side1 = 1000;
+		int side2 = 1000;
+		int side3 = 1000;
+		double angle1 = 60;
+		double angle2 = 60;
+		double angle3 = 60;
+
+		// Act
+		char* result = analyzeTriangle(side1, side2, side3, angle1, angle2, angle3);
+
+		// Assert
+		Assert::IsTrue(strcmp(result, "Equilateral triangle") == 0);
+	}
+
+
+	// Testing for Scalene Triangle using Assert::IsFalse
+	TEST_METHOD(TestNotScaleneTriangle)
+	{
+		// Arrange
+		int side1 = 3;
+		int side2 = 4;
+		int side3 = 4;
+		double angle1 = 60;
+		double angle2 = 61; // Not equal angles
+		double angle3 = 60;
+
+		// Act
+		char* result = analyzeTriangle(side1, side2, side3, angle1, angle2, angle3);
+
+		// Assert
+		Assert::IsFalse(strcmp(result, "Scalene triangle") == 0);
+	}
+
+	// Testing for Isosceles Triangle using Assert::IsFalse
+	TEST_METHOD(TestNotIsoscelesTriangle)
+	{
+		// Arrange
+		int side1 = 3;
+		int side2 = 4;
+		int side3 = 5;
+		double angle1 = 60;
+		double angle2 = 60;
+		double angle3 = 59; // Not equal angles
+
+		// Act
+		char* result = analyzeTriangle(side1, side2, side3, angle1, angle2, angle3);
+
+		// Assert
+		Assert::IsFalse(strcmp(result, "Isosceles triangle") == 0);
+	}
+
+	// Testing for Equilateral Triangle using Assert::IsFalse
+	TEST_METHOD(TestNotEquilateralTriangle)
+	{
+		// Arrange
+		int side1 = 5;
+		int side2 = 5;
+		int side3 = 6; // Not equal sides
+		double angle1 = 60;
+		double angle2 = 60;
+		double angle3 = 60;
+
+		// Act
+		char* result = analyzeTriangle(side1, side2, side3, angle1, angle2, angle3);
+
+		// Assert
+		Assert::IsFalse(strcmp(result, "Equilateral triangle") == 0);
+	}
+    };
 }
